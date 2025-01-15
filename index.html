@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projector Display</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        /* Use a system font fallback for better performance */
+        body {
+            font-family: 'Roboto Mono', monospace, 'Courier New', Courier, monospace;
+            background-color: #070707;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container to center content and set max width */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 36px; /* Adjusted size for mobile readability */
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        p strong {
+            font-weight: bold;
+        }
+
+        p.italic-note {
+            font-style: italic;
+            color: #999999; /* Darker grey to distinguish it */
+        }
+
+        a {
+            color: #00b3b3;
+            text-decoration: underline;
+        }
+
+        /* Improved button styles for touch screens */
+        .button-row {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: #00b3b3;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            flex: 1; /* Make buttons fill available width */
+            min-width: 150px; /* Ensure buttons don't get too small */
+        }
+
+        .button:hover {
+            background-color: #008080;
+        }
+
+        /* Media queries to make sure text is legible on small screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px; /* Smaller titles on very small screens */
+            }
+
+            p {
+                font-size: 14px; /* Smaller paragraph text */
+            }
+
+            .button {
+                padding: 10px 15px; /* Adjust button size for smaller screens */
+            }
+        }
+
+        /* Style for the image */
+        .toggle-image {
+            max-width: 90%; /* Set max width relative to its container */
+            width: 500px; /* Maintain a maximum width for larger screens */
+            display: block;
+            margin: 20px auto; /* Center the image with automatic margins */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Projector Display</h1>
+
+        <p class="italic-note">I've spent quite a lot of time on creating this display and all the information/websites surrounding it - I hope you find it as interesting as I did! :D</p>
+        
+        <p>This display is an abstraction of a projector. We've removed all structural components, all casings (apart from the main shell so you can still easily tell what it is), and the majority of the wires. We've then reconstructed all the parts together again, but vertically separated - so you can see all the individual components.</p>
+        <p>If you're wondering, as of the last time this page was updated (sep 21 at 19:41), I've spent 9 hours and 21 minutes working on this.</p>
+        <p>Below are links to the info pages for certain components of the display.</p>
+        
+        <div class="button-row">
+            <a href="https://aroasanight.github.io/projector-display/optical-engine" class="button">Optical Engine</a>
+        </div>
+    </div>
+</body>
+</html>

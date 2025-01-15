@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optical Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        /* Use a system font fallback for better performance */
+        body {
+            font-family: 'Roboto Mono', monospace, 'Courier New', Courier, monospace;
+            background-color: #070707;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container to center content and set max width */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 36px; /* Adjusted size for mobile readability */
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        p strong {
+            font-weight: bold;
+        }
+
+        p.italic-note {
+            font-style: italic;
+            color: #999999; /* Darker grey to distinguish it */
+        }
+
+        a {
+            color: #00b3b3;
+            text-decoration: underline;
+        }
+
+        /* Improved button styles for touch screens */
+        .button-row {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: #00b3b3;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            flex: 1; /* Make buttons fill available width */
+            min-width: 150px; /* Ensure buttons don't get too small */
+        }
+
+        .button:hover {
+            background-color: #008080;
+        }
+
+        /* Media queries to make sure text is legible on small screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px; /* Smaller titles on very small screens */
+            }
+
+            p {
+                font-size: 14px; /* Smaller paragraph text */
+            }
+
+            .button {
+                padding: 10px 15px; /* Adjust button size for smaller screens */
+            }
+        }
+
+        /* Style for the image */
+        .toggle-image {
+            max-width: 90%; /* Set max width relative to its container */
+            width: 500px; /* Maintain a maximum width for larger screens */
+            display: block;
+            margin: 20px auto; /* Center the image with automatic margins */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Optical Engine</h1>
+
+        <p class="italic-note">The following is loosely based off an extract from howstuffworks.com - you'll find a link to said page at the bottom of this page, beneath the images. I've changed a lot myself for more detail and clarity, such as the parts about the light integrator rod, LCDs, and the lens. I apologise for the wordy description but I think it's more important for it to be fully accurate :)</p>
+        
+        <p>To understand how an LCD projector works, it's best to start at the beginning -- with a beam of light -- and end on the movie screen itself.</p>
+        
+        <p><strong>Step one:</strong> A powerful light source emits a beam of intense, white light. This then passes through a light integrator rod, homogenizing rod, or light tunnel (all names for the same thing) - which distributes the light from the bulb evenly over the rectangle which will eventually become the projected image. Without the light integrater rod, you'd end up with a vignette effect on the screen - since the bulb would likely emit more light from its center - as not only is it spherical and not rectangular, the edges of the circle will be further from the source of light and so will therefore be darker.</p>
+        
+        <p><strong>Step two:</strong> Our beam of white light bounces off a group of dichroic mirrors - which are mirrors coated in a special film that reflects only a specified wavelength of light - in this case red, green, and blue. You know how a prism (or a droplet of water) breaks a beam of light into distinct wavelengths (or a rainbow of colors)? The same principle applies here, only each dichroic mirror breaks off a single specified wavelength. So the white light hits the mirrors, and each reflects a beam of colored light on through the projector: one red, one green and one blue.</p>
+        
+        <p><strong>Step three:</strong> The beams of red, green, and blue light each pass through their own liquid crystal display composed of thousands of tiny pixels. Each pixel contains liquid crystals that can manipulate light when an electric current is applied. These liquid crystals can change their alignment, allowing them to either block light or let it pass through. In a typical LCD, two polarizing filters sit on either side of the liquid crystal layer (polarization is the process by which light waves vibrate in a particular direction). When light hits the first filter, it becomes polarized. As the liquid crystals adjust their alignment in response to the electric current, they control how much light passes through to the second filter, creating different brightnesses of their respective colors. The three LCD screens display the red, green, and blue components of the image separately - for example, to transmit white, all three will allow all light through, but for purple, only the red and blue will allow light through.</p>
+        
+        <p><strong>Step four:</strong> But of course the final image we see isn't red, green or blue; it's full color. So inside the LCD projector, the three tinted versions of this scene recombine in a dichroic prism (a finely crafted combination of four triangular prisms) to form a single image composed of not three colors, but millions of colors.</p>
+        
+        <p><strong>Step five:</strong> The light of this vibrant, colorful version of the scene then passes through a projector lens and onto the big screen. The lens allows for focusing the image, and on some projectors also increasing/decreasing zoom. This is so you could use it as a short-throw projector, with the projector close to the screen, or have it further away just by adjusting a dial.</p>
+        
+        <!-- Image with toggle functionality -->
+        <p class="italic-note" style="text-align: center;">click/tap the images to add/remove labels :D</p>
+        <img id="toggleImage1" class="toggle-image" src="https://aroasanight.github.io/projector-display/assets/optic-engine/labelled-optic-engine.jpeg" alt="Optic Engine (from the bottom)" onclick="toggleImageA()">
+        <p class="italic-note" style="text-align: center;">note: you're looking at the bottom of the engine here (above), as there's more holes on this side</p>
+        <img id="toggleImage2" class="toggle-image" src="https://aroasanight.github.io/projector-display/assets/optic-engine/labelled-light-paths.png" alt="Light Paths (from the top)" onclick="toggleImageB()">
+        <p class="italic-note" style="text-align: center;">...whereas this is from the top.</p>
+
+        <div class="button-row">
+            <a href="https://web.archive.org/web/20240203000825/https://electronics.howstuffworks.com/lcd-projectors.htm" class="button">Source - howstuffworks.com on the Wayback Machine (web.archive.org)</a>
+            <!-- <a href="https://aroasanight.github.io/projector/" class="button">More about this projector</a> -->
+        </div>
+    </div>
+
+    <script>
+        let AisImageOne = true;
+        let BisImageOne = true;
+
+        function toggleImageA() {
+            const imgElement = document.getElementById("toggleImage1");
+            if (AisImageOne) {
+                imgElement.src = "https://aroasanight.github.io/projector-display/assets/optic-engine/optic-engine.jpeg"; // Replace with the second image's path
+            } else {
+                imgElement.src = "https://aroasanight.github.io/projector-display/assets/optic-engine/labelled-optic-engine.jpeg"; // Replace with the first image's path
+            }
+            AisImageOne = !AisImageOne; // Toggle the state
+        }
+
+        function toggleImageB() {
+            const imgElement = document.getElementById("toggleImage2");
+            if (BisImageOne) {
+                imgElement.src = "https://aroasanight.github.io/projector-display/assets/optic-engine/light-paths.png"; // Replace with the second image's path
+            } else {
+                imgElement.src = "https://aroasanight.github.io/projector-display/assets/optic-engine/labelled-light-paths.png"; // Replace with the first image's path
+            }
+            BisImageOne = !BisImageOne; // Toggle the state
+        }
+    </script>
+</body>
+</html>
